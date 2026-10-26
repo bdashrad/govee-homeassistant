@@ -111,10 +111,14 @@ CONF_API_TEMPERATURE_UNIT: Final = "api_temperature_unit"
 #     plausible °F value, no unit field) and Auto read it as °C, so HA showed
 #     98.3°F. Setting the Govee app to °C changed nothing: the API keeps
 #     returning the same °F-scale numbers.
+#   H5105 (thermo-hygrometer): same class. The raw_api_state carried
+#     sensorTemperature 74.48 (plausible indoor °F, no unit field) and Auto read
+#     it as °C, so HA showed 166.1°F.
 FAHRENHEIT_REPORTING_SKUS: Final = frozenset(
     {
         "H5179",
         "H5310",
+        "H5105",
         "H5108",
         "H5109",
         "H5110",
